@@ -22,17 +22,15 @@ Student.prototype.getAverage = function () {
     }
 
     let sum = 0;
-    let kol = 0;
-    
     for( let mark of this.marks ){
         sum += mark;
     }
     
-    return(sum/this.marks.length);
+    return sum / this.marks.length;
 }
 
 Student.prototype.exclude = function (reason) {
   delete this.subject;
   delete this.marks;
-  this.reason = reason;
+  this.excluded = reason;
 }
